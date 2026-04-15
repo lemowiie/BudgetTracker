@@ -31,7 +31,7 @@ Projet fil rouge EFREI B2 — Avril 2026
 ### 1. Cloner le dépôt
 
 ```bash
-git clone https://github.com/VOTRE_REPO/budget-app.git
+https://github.com/lemowiie/BudgetTracker.git'
 cd budget-app
 ```
 
