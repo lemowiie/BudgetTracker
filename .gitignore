@@ -1,0 +1,14 @@
+backend/logs
+backend/*.log
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/pnpm-debug.log*
+backend/lerna-debug.log*
+
+backend/node_modules
+backend/.DS_Store
+backend/dist
+backend/dist-ssr
+backend/coverage
+backend/*.local
