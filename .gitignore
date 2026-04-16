@@ -12,3 +12,5 @@ backend/dist
 backend/dist-ssr
 backend/coverage
 backend/*.local
+
+backend/.env
