@@ -39,12 +39,11 @@ app.use(cors({
 
 app.use(express.json({ limit: '10kb' })); 
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
-app.use(sanitizeInputs); 
 
 // routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/transactions', require('./routes/transactionRoutes'));
-app.use('/api/savings', require('./routes/savingsRoutes'));
+app.use('/api/savings', require('./routes/savingsGoalRoutes'));
 
 
 app.get('/api/health', (req, res) => {

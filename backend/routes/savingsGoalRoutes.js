@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const auth = require('../middlewares/auth.middleware');
-const savingsCtrl = require('../controllers/savingsGoal.controller');
+const { protect } = require('../middleware/auth');
+const savingsCtrl = require('../controllers/savingsGoalController');
 
-router.use(auth);
+router.use(protect);
 
 router.get('/', savingsCtrl.list);
 router.get('/:id', savingsCtrl.getOne);
