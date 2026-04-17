@@ -98,6 +98,11 @@ cd BudgetTracker
 
 ### 2. Backend
 
+```seed
+node seed.js
+```
+
+
 ```bash
 cd backend
 npm install
