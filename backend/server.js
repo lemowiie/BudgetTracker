@@ -43,6 +43,7 @@ app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 // routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/transactions', require('./routes/transactionRoutes'));
+app.use('/api/categories', require('./routes/categoryRoutes'));
 app.use('/api/savings', require('./routes/savingsGoalRoutes'));
 
 
