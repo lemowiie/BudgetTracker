@@ -23,7 +23,7 @@ import { ref, onMounted } from 'vue';
 import MainLayout from '../layouts/MainLayout.vue';
 import BalanceChart from '../components/charts/BalanceChart.vue';
 import { getTransactions } from '../services/transactions';
-import { getGoals } from '../services/savings';
+import { getObjectifs } from '../services/savings';
 
 const incomes = ref(0);
 const expenses = ref(0);
@@ -34,7 +34,7 @@ onMounted(async () => {
   incomes.value = txs.filter(t => t.type === 'income').reduce((s, t) => s + t.amount, 0);
   expenses.value = txs.filter(t => t.type === 'expense').reduce((s, t) => s + t.amount, 0);
 
-  const { data: g } = await getGoals();
+  const { data: g } = await getObjectifs();
   goals.value = g;
 });
 </script>

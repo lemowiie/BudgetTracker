@@ -56,12 +56,13 @@ const submit = async () => {
       name: name.value,
       email: email.value,
       password: password.value,
-      passwordConfirm: passwordConfirm.value
     });
 
     localStorage.setItem('token', data.token);
     emit('success');
   } catch (e) {
+    console.log(e);
+    console.log("API URL =", import.meta.env.VITE_API_URL);
     error.value = e.response?.data?.message || "Erreur lors de l'inscription";
   } finally {
     loading.value = false;

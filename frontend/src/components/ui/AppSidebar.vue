@@ -1,5 +1,6 @@
 <template>
-  <aside class="sidebar">
+    <aside :class="['sidebar']">
+
     <div class="logo">BT</div>
     <nav>
       <RouterLink to="/" class="link" active-class="active">Dashboard</RouterLink>
@@ -13,6 +14,8 @@
 import { RouterLink } from 'vue-router';
 </script>
 
+
+
 <style scoped>
 .sidebar {
   width: 220px;
@@ -22,7 +25,10 @@ import { RouterLink } from 'vue-router';
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  transition: width 0.25s ease;
 }
+
+
 .logo {
   font-weight: 700;
   font-size: 1.4rem;

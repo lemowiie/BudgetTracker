@@ -1,5 +1,9 @@
 <template>
   <header class="navbar">
+    <button class="toggle-btn" @click="$emit('toggleSidebar')">
+      ☰
+    </button>
+
     <h1>BudgetTracker</h1>
     <button class="logout" @click="logout">Déconnexion</button>
   </header>
@@ -16,6 +20,15 @@ const logout = () => {
 </script>
 
 <style scoped>
+.toggle-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
